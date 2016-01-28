@@ -7,10 +7,14 @@ import com.rhg.mvp.model.OnUserInfoListener;
 import com.rhg.mvp.view.ShowUserView;
 
 import android.os.Handler;
+
 /**
- * Õ¹Ê¾ÓÃ»§ÐÅÏ¢µÄÖÐ¼äÀà
- * @author RHG
+ * 
+ * <Presenterå±‚ï¼Œç”¨äºŽå±•ç¤ºç”¨æˆ·ä¿¡æ¯>
+ * 
+ * @author rhg 1013773046@qq.com
  *
+ *         2016å¹´1æœˆ28æ—¥
  */
 public class UserInfoPresenter {
 	private GetUser getUserInfo;

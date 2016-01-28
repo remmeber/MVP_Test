@@ -1,9 +1,10 @@
 package com.rhg.mvp.bean;
 
 /**
- * 用户数据类
- * @author RHG
+ * 
+ * @author rhg 1013773046@qq.com
  *
+ *         2016年1月28日
  */
 public class User {
 	private String name;

@@ -3,10 +3,12 @@ package com.rhg.mvp.view;
 import com.rhg.mvp.bean.User;
 
 /**
- * View层显示用户信息的接口，供Activity继承
  * 
- * @author RHG
+ * <View层显示用户信息的接口，供Activity继承>
+ * 
+ * @author rhg 1013773046@qq.com
  *
+ *         2016年1月28日
  */
 public interface ShowUserView {
 	/**

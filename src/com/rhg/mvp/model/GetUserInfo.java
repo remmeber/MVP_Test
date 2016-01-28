@@ -2,7 +2,7 @@ package com.rhg.mvp.model;
 
 import com.rhg.mvp.bean.User;
 /**
- * Model²ã£¬½øĞĞ»ñÈ¡ÓÃ»§ĞÅÏ¢µÄÒµÎñ²Ù×÷
+ * Modelå±‚ï¼Œè¿›è¡Œè·å–ç”¨æˆ·ä¿¡æ¯çš„ä¸šåŠ¡æ“ä½œ
  * @author RHG
  *
  */
@@ -10,12 +10,12 @@ public class GetUserInfo implements GetUser {
 
 	@Override
 	public void getUser(final int id, final OnUserInfoListener listener) {
-		// ¸ù¾İidÈ¥»ñÈ¡ÏàÓ¦µÄÓÃ»§ĞÅÏ¢£¬²¢ÇÒÊ¹ÓÃOnUserInfoListener½Ó¿Ú»Øµ÷
-		// Ä£Äâ×ÓÏß³ÌºÄÊ±²Ù×÷
+		// æ ¹æ®idå»è·å–ç›¸åº”çš„ç”¨æˆ·ä¿¡æ¯ï¼Œå¹¶ä¸”ä½¿ç”¨OnUserInfoListeneræ¥å£å›è°ƒ
+		// æ¨¡æ‹Ÿå­çº¿ç¨‹è€—æ—¶æ“ä½œ
 		new Thread() {
 			public void run() {
 				try {
-					Thread.sleep(2000);// ºÄÊ±2s
+					Thread.sleep(2000);// è€—æ—¶2s
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -23,7 +23,7 @@ public class GetUserInfo implements GetUser {
 					User user = new User();
 					user.setName("RHG");
 					user.setAge("22");
-					user.setSex("ÄĞ");
+					user.setSex("ç”·");
 					user.setId("1");
 					listener.getUserInfoSuccess(user);
 				} else {

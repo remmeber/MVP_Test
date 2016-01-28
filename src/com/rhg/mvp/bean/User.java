@@ -1,4 +1,4 @@
-package com.rhg.mvp_test.bean;
+package com.rhg.mvp.bean;
 
 /**
  * 用户数据类

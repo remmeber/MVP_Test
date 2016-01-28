@@ -1,6 +1,6 @@
-package com.rhg.mvp_test.model;
+package com.rhg.mvp.model;
 
-import com.rhg.mvp_test.bean.User;
+import com.rhg.mvp.bean.User;
 /**
  * Model层，进行获取用户信息的业务操作
  * @author RHG

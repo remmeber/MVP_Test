@@ -1,6 +1,6 @@
-package com.rhg.mvp_test.view;
+package com.rhg.mvp.view;
 
-import com.rhg.mvp_test.bean.User;
+import com.rhg.mvp.bean.User;
 
 /**
  * View层显示用户信息的接口，供Activity继承

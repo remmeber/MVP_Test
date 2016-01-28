@@ -1,7 +1,8 @@
-import com.rhg.mvp_test.R;
-import com.rhg.mvp_test.bean.User;
-import com.rhg.mvp_test.presenter.UserInfoPresenter;
-import com.rhg.mvp_test.view.ShowUserView;
+package com.rhg.mvp;
+import com.rhg.mvp.bean.User;
+import com.rhg.mvp.presenter.UserInfoPresenter;
+import com.rhg.mvp.view.ShowUserView;
+
 
 import android.app.Activity;
 import android.app.ProgressDialog;

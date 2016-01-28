@@ -1,4 +1,4 @@
-package com.rhg.mvp_test.model;
+package com.rhg.mvp.model;
 /**
  * Model 获取用户信息的接口，
  * @author Administrator

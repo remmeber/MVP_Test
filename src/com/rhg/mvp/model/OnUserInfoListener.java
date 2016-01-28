@@ -1,6 +1,6 @@
-package com.rhg.mvp_test.model;
+package com.rhg.mvp.model;
 
-import com.rhg.mvp_test.bean.User;
+import com.rhg.mvp.bean.User;
 
 /**
  * Model层，用户信息获取的回调接口

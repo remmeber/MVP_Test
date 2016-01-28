@@ -1,10 +1,10 @@
-package com.rhg.mvp_test.presenter;
+package com.rhg.mvp.presenter;
 
-import com.rhg.mvp_test.bean.User;
-import com.rhg.mvp_test.model.GetUser;
-import com.rhg.mvp_test.model.GetUserInfo;
-import com.rhg.mvp_test.model.OnUserInfoListener;
-import com.rhg.mvp_test.view.ShowUserView;
+import com.rhg.mvp.bean.User;
+import com.rhg.mvp.model.GetUser;
+import com.rhg.mvp.model.GetUserInfo;
+import com.rhg.mvp.model.OnUserInfoListener;
+import com.rhg.mvp.view.ShowUserView;
 
 import android.os.Handler;
 

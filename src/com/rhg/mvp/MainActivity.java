@@ -12,7 +12,15 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
+/**
+ * 
+ * <主界面>
+ *  
+ * @author  rhg 1013773046@qq.com
+ * @version [版本号, 2016年1月28日]
+ * @see    [相关类/方法]
+ * @since  [产品/模块版本]
+ */
 public class MainActivity extends Activity implements ShowUserView {
 	Button bt_get;
 	TextView name_txt;

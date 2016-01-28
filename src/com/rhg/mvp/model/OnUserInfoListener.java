@@ -3,7 +3,7 @@ package com.rhg.mvp.model;
 import com.rhg.mvp.bean.User;
 
 /**
- * Model²ã£¬ÓÃ»§ĞÅÏ¢»ñÈ¡µÄ»Øµ÷½Ó¿Ú
+ * Modelå±‚ï¼Œç”¨æˆ·ä¿¡æ¯è·å–çš„å›è°ƒæ¥å£
  * 
  * @author Administrator
  *

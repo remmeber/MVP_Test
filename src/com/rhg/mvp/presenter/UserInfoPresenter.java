@@ -20,11 +20,11 @@ public class UserInfoPresenter {
 
 	public void getUserInfoById(int id) {
 		/**
-		 * ÔÚActivityÖĞµ÷³ö½ø¶ÈÌõ
+		 * åœ¨Activityä¸­è°ƒå‡ºè¿›åº¦æ¡
 		 */
 		showUserView.showLoading();
 		/**
-		 * ´Ë´¦µ÷ÓÃModel²ãµÄ½Ó¿Ú£¬²¢²úÉú»Øµ÷£¬ºó´¥·¢View²ãµÄ½Ó¿Ú
+		 * æ­¤å¤„è°ƒç”¨Modelå±‚çš„æ¥å£ï¼Œå¹¶äº§ç”Ÿå›è°ƒï¼Œåè§¦å‘Viewå±‚çš„æ¥å£
 		 */
 		getUserInfo.getUser(id, new OnUserInfoListener() {
 
@@ -33,7 +33,7 @@ public class UserInfoPresenter {
 				mHandler.post(new Runnable() {
 					public void run() {
 						/**
-						 * »ñÈ¡ĞÅÏ¢³É¹¦£¬µ÷ÓÃView²ãµÄ½Ó¿Ú£¬´¥·¢ÏÔÊ¾
+						 * è·å–ä¿¡æ¯æˆåŠŸï¼Œè°ƒç”¨Viewå±‚çš„æ¥å£ï¼Œè§¦å‘æ˜¾ç¤º
 						 */
 						showUserView.toMainActivity(user);
 						showUserView.hideLoading();

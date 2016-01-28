@@ -44,7 +44,7 @@ public class MainActivity extends Activity implements ShowUserView {
 		age_txt = (TextView) findViewById(R.id.age);
 		sex_txt = (TextView) findViewById(R.id.sex);
 		loading = new ProgressDialog(this);
-		loading.setMessage("Å¬Á¦¼ÓÔØÖĞ....");
+		loading.setMessage("åŠªåŠ›åŠ è½½ä¸­....");
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class MainActivity extends Activity implements ShowUserView {
 
 	@Override
 	public void showFailedError() {
-		Toast.makeText(this, "»ñÈ¡ĞÅÏ¢ÓĞÎó", 0).show();
+		Toast.makeText(this, "è·å–ä¿¡æ¯æœ‰è¯¯", 0).show();
 	}
 
 }

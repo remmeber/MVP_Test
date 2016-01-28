@@ -1,7 +1,7 @@
 package com.rhg.mvp.bean;
 
 /**
- * ÓÃ»§Êı¾İÀà
+ * ç”¨æˆ·æ•°æ®ç±»
  * @author RHG
  *
  */

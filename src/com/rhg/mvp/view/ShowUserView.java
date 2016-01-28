@@ -3,31 +3,31 @@ package com.rhg.mvp.view;
 import com.rhg.mvp.bean.User;
 
 /**
- * View²ãÏÔÊ¾ÓÃ»§ĞÅÏ¢µÄ½Ó¿Ú£¬¹©Activity¼Ì³Ğ
+ * Viewå±‚æ˜¾ç¤ºç”¨æˆ·ä¿¡æ¯çš„æ¥å£ï¼Œä¾›Activityç»§æ‰¿
  * 
  * @author RHG
  *
  */
 public interface ShowUserView {
 	/**
-	 * ÓÃÓÚÏÔÊ¾½ø¶ÈÌõ
+	 * ç”¨äºæ˜¾ç¤ºè¿›åº¦æ¡
 	 */
 	void showLoading();
 
 	/**
-	 * ÓÃÓÚÒş²Ø½ø¶ÈÌõ
+	 * ç”¨äºéšè—è¿›åº¦æ¡
 	 */
 	void hideLoading();
 
 	/**
-	 * ½«ÓÃ»§ĞÅÏ¢Õ¹Ê¾
+	 * å°†ç”¨æˆ·ä¿¡æ¯å±•ç¤º
 	 * 
 	 * @param user
 	 */
 	void toMainActivity(User user);
 
 	/**
-	 * ÏÔÊ¾Ê§°Ü
+	 * æ˜¾ç¤ºå¤±è´¥
 	 */
 	void showFailedError();
 }

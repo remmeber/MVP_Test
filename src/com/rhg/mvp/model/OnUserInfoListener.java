@@ -5,7 +5,7 @@ import com.rhg.mvp.bean.User;
 /**
  * Model层，用户信息获取的回调接口
  * 
- * @author Administrator
+ * @author RHG
  *
  */
 public interface OnUserInfoListener {

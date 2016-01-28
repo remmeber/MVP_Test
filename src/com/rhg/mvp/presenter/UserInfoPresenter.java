@@ -7,7 +7,11 @@ import com.rhg.mvp.model.OnUserInfoListener;
 import com.rhg.mvp.view.ShowUserView;
 
 import android.os.Handler;
-
+/**
+ * 展示用户信息的中间类
+ * @author RHG
+ *
+ */
 public class UserInfoPresenter {
 	private GetUser getUserInfo;
 	private ShowUserView showUserView;

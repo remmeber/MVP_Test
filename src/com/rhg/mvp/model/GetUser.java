@@ -1,14 +1,22 @@
 package com.rhg.mvp.model;
+
 /**
- * Model »ñÈ¡ÓÃ»§ĞÅÏ¢µÄ½Ó¿Ú£¬
- * @author RHG
- *
+ * 
+ * <Model ç”¨æˆ·è·å–ä¿¡æ¯>
+ * 
+ * @author rhg 1013773046@qq.com
+ * @version [ç‰ˆæœ¬å·, 2016å¹´1æœˆ31æ—¥]
+ * @see [ç›¸å…³ç±»/æ–¹æ³•]
+ * @since [äº§å“/æ¨¡å—ç‰ˆæœ¬]
  */
 public interface GetUser {
-	/**
-	 * ¸ù¾İÓÃ»§idÀ´»ñÈ¡ÓÃ»§µÄĞÅÏ¢
-	 * @param id
-	 * @param listener »ñÈ¡ĞÅÏ¢µÄ»Øµ÷½Ó¿Ú
-	 */
-	public void getUser(int id, OnUserInfoListener listener);
+    /**
+     * ç”¨äºè·å–ç”¨æˆ·ä¿¡æ¯çš„æ¥å£
+     * 
+     * @param id
+     * @param listener è·å–ä¿¡æ¯å›è°ƒ
+     */
+    public void getUser(int id, OnUserInfoListener listener);
+
+    public void getUsers(OnUserInfoListener listener);
 }

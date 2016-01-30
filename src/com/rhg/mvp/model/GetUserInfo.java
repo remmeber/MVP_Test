@@ -7,20 +7,13 @@ import com.rhg.mvp.bean.User;
 
 /**
  * 
-<<<<<<< HEAD
- * < Model层，进行获取用户信息的业务操作>
  * 
- * @author rhg 1013773046@qq.com
- *
- *         2016年1月28日
-=======
  * <Model层，进行获取用户信息的业务操作>
  * 
  * @author rhg 1013773046@qq.com
  * @version [版本号, 2016年1月31日]
  * @see [相关类/方法]
  * @since [产品/模块版本]
->>>>>>> rhg2
  */
 public class GetUserInfo implements GetUser {
 

@@ -5,7 +5,7 @@
     
     <ListView 
         android:id="@+id/user_list"
-        android:layout_above="@+id/get"
+        android:layout_below="@+id/get"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -13,5 +13,6 @@
         android:id="@+id/get"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+       	android:layout_alignParentBottom="true"
         android:hint="@string/获取" />
 </RelativeLayout>

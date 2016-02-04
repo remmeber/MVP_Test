@@ -1,5 +1,6 @@
 package com.rhg.mvp.model;
 
+import com.google.gson.Gson;
 import com.rhg.mvp.bean.User;
 
 import rx.Observable;

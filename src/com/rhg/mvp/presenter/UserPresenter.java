@@ -1,5 +1,7 @@
 package com.rhg.mvp.presenter;
 
+import java.util.ArrayList;
+
 import com.rhg.mvp.bean.User;
 import com.rhg.mvp.model.IUserInfoModel;
 import com.rhg.mvp.model.UserInfoModel;
@@ -20,37 +22,35 @@ public class UserPresenter implements IUserInfoPresenter {
         this.showUserView = showUserView;
         mUserInfoModel = new UserInfoModel();
     }
-    
+
     @Override
     public void getUserInfo() {
-        mUserInfoModel.getUserInfo()
-        .subscribeOn(Schedulers.io())
-        .doOnSubscribe(new Action0() {
+        mUserInfoModel.getUserInfo().subscribeOn(Schedulers.io()).doOnSubscribe(new Action0() {
             @Override
             public void call() {
-                showUserView.showLoading();
+                // showUserView.showLoading();
             }
-        })
-        .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(new Observer<User>() {
+        }).observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<ArrayList<User>>() {
 
             @Override
             public void onCompleted() {
                 Log.i("RHG", "onCompleted");
-                showUserView.hideLoading();
+                // showUserView.hideLoading();
+                showUserView.refreshFinish();
             }
 
             @Override
             public void onError(Throwable arg0) {
-                showUserView.hideLoading();
-//                showUserView.showLoadFailedError(retry);
+                // showUserView.hideLoading();
+                // showUserView.showLoadFailedError(retry);
             }
 
             @Override
-            public void onNext(User user) {
+            public void onNext(ArrayList<User> users) {
                 Log.i("RHG", "onNext");
-                showUserView.showDatainActivity(user);
-            }});
+                showUserView.showDatainActivity(users);
+            }
+        });
     }
 
 }

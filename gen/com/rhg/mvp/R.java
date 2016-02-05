@@ -5287,7 +5287,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int checkbox=0x7f070051;
         public static final int chronometer=0x7f07007c;
         public static final int collapseActionView=0x7f070026;
-        public static final int container=0x7f07006d;
+        public static final int container=0x7f07006c;
         public static final int contentPanel=0x7f070049;
         public static final int cubein=0x7f07002e;
         public static final int cubeout=0x7f07002f;
@@ -5295,7 +5295,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int customPanel=0x7f07004e;
         public static final int decor_content_parent=0x7f070057;
         public static final int default_activity_button=0x7f07003f;
-        public static final int detail_content=0x7f07006e;
+        public static final int detail_content=0x7f07006d;
         public static final int disableHome=0x7f070019;
         public static final int disabled=0x7f07000d;
         public static final int edit_query=0x7f07005b;
@@ -5307,7 +5307,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int flip=0x7f070013;
         public static final int fliphorizontal=0x7f070030;
         public static final int flipvertical=0x7f070031;
-        public static final int get=0x7f07006c;
+        public static final int get=0x7f070074;
         public static final int gridview=0x7f070000;
         public static final int home=0x7f070003;
         public static final int homeAsUp=0x7f07001a;
@@ -5320,10 +5320,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int line3=0x7f07007e;
         public static final int listMode=0x7f070016;
         public static final int list_item=0x7f070040;
-        public static final int load_msg=0x7f07006f;
-        public static final int load_retry=0x7f070070;
-        public static final int loading_iv=0x7f070071;
-        public static final int loading_tv=0x7f070072;
+        public static final int load_msg=0x7f07006e;
+        public static final int load_retry=0x7f07006f;
+        public static final int loading_iv=0x7f070070;
+        public static final int loading_tv=0x7f070071;
         public static final int manualOnly=0x7f07000e;
         public static final int media_actions=0x7f070078;
         public static final int middle=0x7f07002c;
@@ -5335,6 +5335,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int parentPanel=0x7f070045;
         public static final int progress_circular=0x7f07000a;
         public static final int progress_horizontal=0x7f07000b;
+        public static final int ptr=0x7f070073;
         public static final int pullDownFromTop=0x7f07000f;
         public static final int pullFromEnd=0x7f070010;
         public static final int pullFromStart=0x7f070011;
@@ -5388,9 +5389,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int topPanel=0x7f070046;
         public static final int up=0x7f070004;
         public static final int useLogo=0x7f07001f;
-        public static final int user_list=0x7f070074;
         public static final int webview=0x7f070001;
-        public static final int wifi_retry=0x7f070073;
+        public static final int wifi_retry=0x7f070072;
         public static final int withText=0x7f070029;
         public static final int wrap_content=0x7f070015;
         public static final int zoomin=0x7f070037;

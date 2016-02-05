@@ -2,17 +2,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    
-    <ListView 
-        android:id="@+id/user_list"
-        android:layout_above="@+id/get"
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ptr"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/get"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/dp2"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:splitMotionEvents="false"
+        app:ptrAnimationStyle="flip" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
 
     <Button
         android:id="@+id/get"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       	android:layout_alignParentBottom="true"
+        android:layout_alignParentBottom="true"
         android:hint="@string/获取" />
+
 </RelativeLayout>

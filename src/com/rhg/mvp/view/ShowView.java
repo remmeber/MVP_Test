@@ -1,5 +1,7 @@
 package com.rhg.mvp.view;
 
+import java.util.ArrayList;
+
 import com.rhg.mvp.bean.User;
 import com.rhg.mvp.model.IRetry;
 
@@ -21,11 +23,15 @@ public interface ShowView extends IBaseViewShow {
      * 
      * @param user
      */
-    void showDatainActivity(User user);
+    void showDatainActivity(ArrayList<User> user);
 
     /**
      * 显示失败
      */
     void showLoadFailedError(IRetry retry);
+
+
+    void refreshFinish();
+
 
 }

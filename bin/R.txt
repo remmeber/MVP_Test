@@ -3346,7 +3346,7 @@ int id cancel_action 0x7f070076
 int id checkbox 0x7f070051
 int id chronometer 0x7f07007c
 int id collapseActionView 0x7f070026
-int id container 0x7f07006d
+int id container 0x7f07006c
 int id contentPanel 0x7f070049
 int id cubein 0x7f07002e
 int id cubeout 0x7f07002f
@@ -3354,7 +3354,7 @@ int id custom 0x7f07004f
 int id customPanel 0x7f07004e
 int id decor_content_parent 0x7f070057
 int id default_activity_button 0x7f07003f
-int id detail_content 0x7f07006e
+int id detail_content 0x7f07006d
 int id disableHome 0x7f070019
 int id disabled 0x7f07000d
 int id edit_query 0x7f07005b
@@ -3366,7 +3366,7 @@ int id fl_inner 0x7f070082
 int id flip 0x7f070013
 int id fliphorizontal 0x7f070030
 int id flipvertical 0x7f070031
-int id get 0x7f07006c
+int id get 0x7f070074
 int id gridview 0x7f070000
 int id home 0x7f070003
 int id homeAsUp 0x7f07001a
@@ -3379,10 +3379,10 @@ int id line1 0x7f07007a
 int id line3 0x7f07007e
 int id listMode 0x7f070016
 int id list_item 0x7f070040
-int id load_msg 0x7f07006f
-int id load_retry 0x7f070070
-int id loading_iv 0x7f070071
-int id loading_tv 0x7f070072
+int id load_msg 0x7f07006e
+int id load_retry 0x7f07006f
+int id loading_iv 0x7f070070
+int id loading_tv 0x7f070071
 int id manualOnly 0x7f07000e
 int id media_actions 0x7f070078
 int id middle 0x7f07002c
@@ -3394,6 +3394,7 @@ int id normal 0x7f070017
 int id parentPanel 0x7f070045
 int id progress_circular 0x7f07000a
 int id progress_horizontal 0x7f07000b
+int id ptr 0x7f070073
 int id pullDownFromTop 0x7f07000f
 int id pullFromEnd 0x7f070010
 int id pullFromStart 0x7f070011
@@ -3447,9 +3448,8 @@ int id title_template 0x7f070047
 int id topPanel 0x7f070046
 int id up 0x7f070004
 int id useLogo 0x7f07001f
-int id user_list 0x7f070074
 int id webview 0x7f070001
-int id wifi_retry 0x7f070073
+int id wifi_retry 0x7f070072
 int id withText 0x7f070029
 int id wrap_content 0x7f070015
 int id zoomin 0x7f070037

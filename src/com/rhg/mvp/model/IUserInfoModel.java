@@ -1,5 +1,7 @@
 package com.rhg.mvp.model;
 
+import java.util.ArrayList;
+
 import com.rhg.mvp.bean.User;
 
 import rx.Observable;
@@ -13,5 +15,5 @@ import rx.Observable;
  * @since  [产品/模块版本]
  */
 public interface IUserInfoModel {
-    Observable<User> getUserInfo();
+    Observable<ArrayList<User>> getUserInfo();
 }

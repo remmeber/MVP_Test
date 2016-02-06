@@ -50,9 +50,9 @@ public class PullToRefreshListViewActivity extends Activity implements ShowView 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        // setContentView(R.layout.content);
-        userPresenter = new UserPresenter(this);
+        setContentView(R.layout.pulltorefresh);
+//         setContentView(R.layout.content);
+        // userPresenter = new UserPresenter(this);
         InitView();
         bt_get.setOnClickListener(new OnClickListener() {
 

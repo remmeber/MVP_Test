@@ -31,7 +31,6 @@ public interface ShowView extends IBaseViewShow {
     void showLoadFailedError(IRetry retry);
 
 
-    void refreshFinish();
 
 
 }

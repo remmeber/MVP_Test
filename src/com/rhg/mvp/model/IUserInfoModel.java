@@ -1,19 +1,23 @@
 package com.rhg.mvp.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import com.rhg.mvp.bean.DataStream;
 import com.rhg.mvp.bean.User;
 
 import rx.Observable;
+
 /**
  * 
  * <获取用户信息的Model层接口>
- *  
- * @author  rhg 1013773046@qq.com
+ * 
+ * @author rhg 1013773046@qq.com
  * @version [版本号, 2016年2月3日]
- * @see    [相关类/方法]
- * @since  [产品/模块版本]
+ * @see [相关类/方法]
+ * @since [产品/模块版本]
  */
 public interface IUserInfoModel {
-    Observable<ArrayList<User>> getUserInfo();
+    // Observable<ArrayList<User>> getUserInfo();
+    Observable<DataStream> getExData();
 }

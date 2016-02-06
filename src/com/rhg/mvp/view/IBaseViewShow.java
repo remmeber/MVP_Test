@@ -11,4 +11,6 @@ public interface IBaseViewShow {
      */
     void hideLoading();
 
+    void refreshFinish();
+
 }

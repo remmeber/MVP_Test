@@ -15,19 +15,27 @@ import com.rhg.mvp.view.ExpandableListView_show;
 
 import android.app.ExpandableListActivity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.format.DateUtils;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AbsListView;
+import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 public class PullToRefreshExpandableListViewActivity extends ExpandableListActivity
         implements
             ExpandableListView_show {
 
     UserPresenter userPresenter;
-    // PullToRefreshExpandableListView ptrexlistview;
     PullToRefreshExpandableListView ptrexlistview;
     UserContactsAdapter adapter;
     List<Group> mGroup;
     List<List<User>> mUser;
+    ILoadingLayout startLabels;
+    String lastUpdateTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +48,34 @@ public class PullToRefreshExpandableListViewActivity extends ExpandableListActiv
 
     private void initView() {
         ptrexlistview = (PullToRefreshExpandableListView) findViewById(R.id.ptrex);
+        startLabels = ptrexlistview.getLoadingLayoutProxy();
         ptrexlistview.setMode(Mode.PULL_FROM_START);
+        /**
+         * 添加头部控件
+         */
+        View header = getLayoutInflater().inflate(R.layout.headerview, ptrexlistview, false);
+        AbsListView.LayoutParams params = new AbsListView.LayoutParams(
+                AbsListView.LayoutParams.MATCH_PARENT, AbsListView.LayoutParams.WRAP_CONTENT);
+        header.setLayoutParams(params);
+        ptrexlistview.getRefreshableView().addHeaderView(header);
+
+        Button button = (Button) header.findViewById(R.id.header_bt);
+        button.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(PullToRefreshExpandableListViewActivity.this, "header is clicked", 0)
+                        .show();
+            }
+        });
+        View footer = getLayoutInflater().inflate(R.layout.footerview, ptrexlistview, false);
+        params = new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT,
+                AbsListView.LayoutParams.WRAP_CONTENT);
+        footer.setLayoutParams(params);
+        ptrexlistview.getRefreshableView().addFooterView(footer);
+
+
+        // 取消系统指示箭头
         ptrexlistview.getRefreshableView().setGroupIndicator(null);
         ptrexlistview.getRefreshableView().setVerticalScrollBarEnabled(true);
         ptrexlistview.getRefreshableView().setScrollBarFadeDuration(500);
@@ -48,15 +83,14 @@ public class PullToRefreshExpandableListViewActivity extends ExpandableListActiv
 
             @Override
             public void onRefresh(PullToRefreshBase<ExpandableListView> refreshView) {
-                String label = DateUtils.formatDateTime(getApplicationContext(),
-                        System.currentTimeMillis(), DateUtils.FORMAT_SHOW_TIME
-                                | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
-                ILoadingLayout startLabels = ptrexlistview.getLoadingLayoutProxy();
-                startLabels.setLastUpdatedLabel(label);
+                // startLabels.setLastUpdatedLabel(label);
+                // startLabels.setRefreshingLabel("加载成功");
                 startLabels.setPullLabel("下拉刷新...");// 刚下拉时，显示的提示
                 startLabels.setRefreshingLabel("正在载入...");// 刷新时
                 startLabels.setReleaseLabel("放开刷新...");// 下来达到一定距离时，显示的提示
+                startLabels.setLastUpdatedLabel("上次刷新时间：" + lastUpdateTime);
                 userPresenter.getUserInfo();
+
             }
         });
         // ptrexlistview.setOnRefreshListener(new OnRefreshListener2<ExpandableListView>() {
@@ -95,7 +129,12 @@ public class PullToRefreshExpandableListViewActivity extends ExpandableListActiv
 
     @Override
     public void refreshFinish() {
-        ptrexlistview.onRefreshComplete();
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
+                ptrexlistview.onRefreshComplete();
+                startLabels.setLastUpdatedLabel("上次刷新时间：" + lastUpdateTime);
+            }
+        }, 1000);
     }
 
     @Override
@@ -110,6 +149,11 @@ public class PullToRefreshExpandableListViewActivity extends ExpandableListActiv
             mUser.addAll(user);
             adapter.notifyDataSetChanged();
         }
+        String label = DateUtils.formatDateTime(getApplicationContext(), System.currentTimeMillis(),
+                DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE
+                        | DateUtils.FORMAT_ABBREV_ALL);
+        startLabels.setLastUpdatedLabel("最后更新时间：" + label);
+        lastUpdateTime = label;
     }
 
 }

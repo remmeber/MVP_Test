@@ -62,7 +62,7 @@ public class UserPresenter implements IUserInfoPresenter {
 
                     @Override
                     public void onNext(DataStream data) {
-                         showUserView.showInExpandableListView(data.getGroup(), data.getUser());
+                        showUserView.showInExpandableListView(data.getGroup(), data.getUser());
                     }
                 });
     }

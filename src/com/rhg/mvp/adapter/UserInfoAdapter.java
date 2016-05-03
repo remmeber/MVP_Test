@@ -27,6 +27,7 @@ public class UserInfoAdapter extends BaseAdapter {
 
     private ArrayList<User> uList;
     Context mContext;
+    private static final int MAX = 6;
 
     /**
      * 将列表传入 <默认构造函数>
@@ -35,6 +36,24 @@ public class UserInfoAdapter extends BaseAdapter {
         this.uList = uList;
         this.mContext = mContext;
     }
+
+    enum ItemType {
+        Type0, Type1, Type2;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return super.getItemViewType(position);
+    }
+
+
+
+    @Override
+    public int getViewTypeCount() {
+        return MAX;
+    }
+
+
 
     @Override
     public int getCount() {

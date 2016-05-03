@@ -10,6 +10,7 @@ import com.handmark.pulltorefresh.library.PullToRefreshExpandableListView;
 import com.rhg.mvp.adapter.UserContactsAdapter;
 import com.rhg.mvp.bean.Group;
 import com.rhg.mvp.bean.User;
+import com.rhg.mvp.presenter.IUserInfoPresenter;
 import com.rhg.mvp.presenter.UserPresenter;
 import com.rhg.mvp.view.ExpandableListView_show;
 
@@ -17,7 +18,6 @@ import android.app.ExpandableListActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.format.DateUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AbsListView;
@@ -29,7 +29,7 @@ public class PullToRefreshExpandableListViewActivity extends ExpandableListActiv
         implements
             ExpandableListView_show {
 
-    UserPresenter userPresenter;
+    IUserInfoPresenter userPresenter;
     PullToRefreshExpandableListView ptrexlistview;
     UserContactsAdapter adapter;
     List<Group> mGroup;
@@ -57,7 +57,7 @@ public class PullToRefreshExpandableListViewActivity extends ExpandableListActiv
         AbsListView.LayoutParams params = new AbsListView.LayoutParams(
                 AbsListView.LayoutParams.MATCH_PARENT, AbsListView.LayoutParams.WRAP_CONTENT);
         header.setLayoutParams(params);
-        ptrexlistview.getRefreshableView().addHeaderView(header);
+        ptrexlistview.getRefreshableView().addHeaderView(header);   
 
         Button button = (Button) header.findViewById(R.id.header_bt);
         button.setOnClickListener(new OnClickListener() {

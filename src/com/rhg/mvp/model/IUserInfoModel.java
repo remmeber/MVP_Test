@@ -1,10 +1,6 @@
 package com.rhg.mvp.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.rhg.mvp.bean.DataStream;
-import com.rhg.mvp.bean.User;
 
 import rx.Observable;
 

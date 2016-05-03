@@ -7,12 +7,14 @@ import com.rhg.mvp.bean.DataStream;
 import com.rhg.mvp.bean.Group;
 import com.rhg.mvp.bean.User;
 
+import android.util.Log;
 import rx.Observable;
 import rx.Observable.OnSubscribe;
 import rx.Subscriber;
 import rx.functions.Func1;
 
 public class UserInfoModel implements IUserInfoModel {
+    private final static String TAG = "UserInfoModel";
 
     @Override
     public Observable<DataStream> getExData() {
@@ -20,8 +22,9 @@ public class UserInfoModel implements IUserInfoModel {
 
             @Override
             public Observable<DataStream> call(String string) {
+                Log.i(TAG, string);
                 return Observable.create(new OnSubscribe<DataStream>() {
-
+                    
                     @Override
                     public void call(final Subscriber<? super DataStream> subscribe) {
                         new Thread() {
